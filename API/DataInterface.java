@@ -1,4 +1,3 @@
-/* 18360021 - Randy Ikhsan Ramadhan - Pemrograman Jaringan */
 package API;
 
 import java.rmi.Remote;
