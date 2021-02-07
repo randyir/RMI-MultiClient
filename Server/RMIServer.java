@@ -1,0 +1,18 @@
+/* 18360021 - Randy Ikhsan Ramadhan - Pemrograman Jaringan */
+package Server;
+
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+public class RMIServer {
+    public static void main(String[] args) throws RemoteException, NotBoundException {
+        Registry registry = LocateRegistry.createRegistry(1099);
+        
+        Data data = new Data();
+        registry.rebind("data", data);
+        
+        System.out.println("Server Berhasil Dijalankan");
+    }
+}
